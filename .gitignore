@@ -1,0 +1,21 @@
+# Ignore database file
+db.sqlite3
+
+# Ignore media uploads
+/media/
+
+# Byte-compiled / cache files
+__pycache__/
+*.py[cod]
+
+# Ignore virtual environments (if any)
+venv/
+env/
+
+# Ignore IDE/editor settings
+.vscode/
+.idea/
+
+# OS generated files
+.DS_Store
+Thumbs.db

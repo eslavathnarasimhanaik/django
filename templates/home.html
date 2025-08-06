@@ -1,0 +1,36 @@
+{%  load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <h1>welcome to home page</h1>
+    <img src="{% static  'image/luffy.jpg' %}" alt="luffy">
+   <table border="1">
+    <tr>
+         <th>Image</th>
+         <th>First Name</th>
+         <th>Last Name</th>
+         <th>Age</th>
+         <th>Email</th>
+         <th>dob</th>
+         <th>branch</th>
+    </tr>
+    {% for i in s %}
+    <tr>
+        <td><img src="{{ i.image.url }}" alt="{{ i.first_name }}" width="50"></td> 
+        <td>{{ i.first_name }}</td>
+        <td>{{ i.last_name }}</td>
+        <td>{{ i.age }}</td>
+        <td>{{ i.email }}</td>
+        <td>{{i.dob}}</td>
+        <td>{{i.branch}}</td>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
